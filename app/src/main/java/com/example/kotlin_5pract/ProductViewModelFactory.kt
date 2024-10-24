@@ -28,3 +28,7 @@ class ProductViewModelFactory(private val application: Application) : ViewModelP
 }
 
 
+//Это фабрика для создания экземпляров ProductViewModel. 
+//Она используется для передачи зависимостей в ViewModel.
+//Функции:
+//Создание ViewModel: Создает экземпляры ProductViewModel с необходимыми зависимостями.
