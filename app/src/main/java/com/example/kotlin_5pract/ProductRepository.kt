@@ -11,8 +11,10 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class ProductRepository(private val productDao: ProductDao, private val productApi: ProductApi) {
+    // LiveData, которая содержит список всех продуктов из локальной базы данных
     val allProducts: LiveData<List<Product>> = productDao.getAllProducts()
 
+    // Метод для вставки нового продукта в локальную базу данных
     suspend fun insert(product: Product) {
         productDao.insertProduct(product)
     }
